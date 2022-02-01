@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ 
+<!-- {{object_list}} -->
+<p>Hi</p>
+
+{%for instance in object_list%}
+<p>{{instance.id}} - {{instance.title}} <a href='{{ instance.get_absolute_url }}update/'>Edit</a> 
+    <form action="" method="post">
+        <input type="button" value="Delete">
+    </form> </p>
+
+{%endfor%}
+
+{% endblock %}
